@@ -1,0 +1,14 @@
+<ion-view title="Cheapest Drink">
+  <ion-content class="has-header">
+    <!-- Google Map -->
+    <div id="map" data-tap-disabled="true"></div>
+    <!-- our list of drinks -->
+    <ion-list>
+        <ion-item ng-repeat="cheapestDrink in cheapestDrinks" type="item-text-wrap" href="#/tab/cheapestDrink/{{cheapestDrink.id}}">
+        {{cheapestDrink.name}}
+      </ion-item>
+    </ion-list>
+      
+      {{barInfo}}
+  </ion-content>
+</ion-view>

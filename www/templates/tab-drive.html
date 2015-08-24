@@ -1,0 +1,106 @@
+<ion-view title="Drive">
+  <ion-content class="has-header">
+      <div class="card">
+          <div class="item item-divider">
+            Drive
+          </div>
+          <div class="item item-text-wrap black">
+          <!-- our list of transportation -->
+            <ion-list>
+                <div ng-repeat="transport in transportList">
+                    <ion-item 
+                              type="item-text-wrap" 
+                              class="item-avatar item-stable" 
+                              ng-click="toggleList(transport)" 
+                              ng-class="{active: isShown(transport)}">
+                        {{transport.name}}
+                        <img src="{{transport.img}}">
+                    </ion-item>
+                    <!-- If Taxi -->
+                    <ion-item class="item-accordion"
+                              ng-repeat="item in transport.items"
+                              ng-show="isShown(transport)"
+                              ng-if="transport.name === 'Taxi'">
+                        <div class="row">
+                          <div class="col">
+                              {{item.company}}
+                            </div>
+                          <div class="col">
+                              <div ng-if="item.cost === 1">
+                                  <img class="dollarBill" 
+                                    src="../img/icons/dollar104.png">
+                              </div>
+                              <div ng-if="item.cost === 2">
+                                  <img class="dollarBill" 
+                                    src="../img/icons/dollar104.png">
+                                  <img class="dollarBill" 
+                                    src="../img/icons/dollar104.png">
+                              </div>
+                              <div ng-if="item.cost === 3">
+                                  <img class="dollarBill" 
+                                    src="../img/icons/dollar104.png">
+                                  <img class="dollarBill" 
+                                    src="../img/icons/dollar104.png">
+                                  <img class="dollarBill" 
+                                    src="../img/icons/dollar104.png">
+                              </div>
+                            </div>
+                            <div class="col">
+                              <img class="floatRight"
+                                   src="../img/icons/telephone65.png">
+                            </div>
+                        </div>
+                    </ion-item>
+                    <!-- If Bus -->
+                    <ion-item class="item-accordion"
+                              ng-repeat="item in transport.items"
+                              ng-show="isShown(transport)"
+                              ng-if="transport.name === 'Bus'">
+                        <div class="row">
+                          <div class="col">
+                              Route <img src="../img/icons/{{item.route}}.png">
+                            </div>
+                          <div class="col">
+                              Departs: 
+                              <span ng-if="item.depart<5" 
+                                    class="assertive">
+                                  {{item.depart}}
+                              </span>
+                              <span ng-if="5<=item.depart  && 
+                                           item.depart<10" 
+                                    class="energized">
+                                  {{item.depart}}
+                              </span>
+                              <span ng-if="item.depart >= 10" 
+                                    class="balanced">
+                                  {{item.depart}}
+                              </span>
+                            </div>
+                          <div class="col">
+                              ETA: 
+                              <span ng-if="item.totalTime<5" 
+                                    class="assertive">
+                                  {{item.totalTime}}
+                              </span>
+                              <span ng-if="5<=item.totalTime  && 
+                                           item.totalTime<10" 
+                                    class="energized">
+                                  {{item.totalTime}}
+                              </span>
+                              <span ng-if="item.totalTime >= 10" 
+                                    class="balanced">
+                                  {{item.totalTime}}
+                              </span>
+                            </div>
+                        </div>
+                    </ion-item>
+                </div>
+            </ion-list>
+          </div>
+          <div class="item item-divider">
+            Select Method of Transportation Above
+          </div>
+      </div>
+  </ion-content>
+</ion-view>
+

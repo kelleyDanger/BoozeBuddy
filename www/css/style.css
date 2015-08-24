@@ -1,0 +1,84 @@
+/* Empty. Add your own CSS if you like */
+body, html {
+    font-size: 14px;
+    height: 100%
+}
+
+/* A LINKS */
+A:link {text-decoration: none; color: #000}
+A:visited {text-decoration: none; color: #000}
+A:active {text-decoration: none; color: #fff}
+A:hover {font-weight:bold;}
+
+#logo {
+    margin: 0 auto;
+}
+
+/* Custom CSS for Google Maps */
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 250px;
+    height: 250px;
+}
+
+.black_half {
+    position: absolute;
+    height: 100%;
+    background-color: #000;
+}
+
+.white_half {
+    height: 100%;
+    background-color: #fff;
+}
+
+.center {
+    text-align: center;
+}
+
+.titleLink {
+    font-size: 3em;
+}
+    .titleLink.white {
+        color: #fff;
+    }
+
+.black {
+    background-color: #000;
+    color: #fff;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.red {
+    color: 
+
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+ 
+
+/* Accordion */
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+
