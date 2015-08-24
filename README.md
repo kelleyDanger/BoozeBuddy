@@ -4,6 +4,6 @@ Cordova Android application to help users find the cheapest booze in their area,
 
 ## Screenshots of UI Sketch
 
-<img src="/screenshots/loading.png" alt="Loading Screen" style="width:50px">
+<img src="/screenshots/loading.png" alt="Loading Screen" style="width:50px;">
 
 
